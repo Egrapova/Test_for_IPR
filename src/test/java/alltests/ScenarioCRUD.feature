@@ -4,7 +4,7 @@ Feature: Testing Post&Get
     * karate.configure('ssl', { trustAll: true })
 
   Scenario: Send Post
-   * def body = read('classpath:alltests/createUser.json')
+   * def body = read('classpath:alltests/json/createUser.json')
 
     Given path "api/users"
     And request body
@@ -22,7 +22,7 @@ Feature: Testing Post&Get
     * print total
 
   Scenario: Send Put
-    * def body = read('classpath:alltests/updateUser1.json')
+    * def body = read('classpath:alltests/json/updateUser1.json')
 
     Given path "api/users/2"
     And request body
@@ -32,7 +32,7 @@ Feature: Testing Post&Get
     * print updateAt1
 
   Scenario: Send Patch
-    * def body = read('classpath:alltests/updateUser2.json')
+    * def body = read('classpath:alltests/json/updateUser2.json')
 
     Given path "api/users/2"
     And request body
@@ -42,7 +42,7 @@ Feature: Testing Post&Get
     * print updateAt2
 
   Scenario: Send Delete
-    
+
     Given path "api/users/2"
     When method delete
     Then status 204
