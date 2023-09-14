@@ -4,8 +4,6 @@ Feature: Put
     * karate.configure('ssl', { trustAll: true })
 
   Scenario: Send Put
-    * def body = read('classpath:alltests/json/updateUser1.json')
-
     Given path "api/users/2"
     And request body
     When method put
