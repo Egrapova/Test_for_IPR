@@ -1,6 +1,29 @@
 Feature: Testing Post&Get
   Background:
+    * url "https://reqres.in/"
     * karate.configure('ssl', { trustAll: true })
+
+  Scenario Outline: Create User Outline
+    * def body = read('classpath:alltests/json/createUserOutline.json')
+    * def result = call read('classpath:alltests/features/PostReq.feature')
+    * def temp1 = '<name1>'
+    * def temp2 = '<job1>'
+    * print result.response
+    * match __row == {name1: '#(name1)', job1: '#(job1)'}
+    * match result.response == { createdAt: '#string', name: '#(name1)', id: '#string', job: '#(job1)'}
+    * match temp1 == __row.name1
+    * match temp2 == __row.job1
+    * match result.responseStatus == 201
+#    * assert responseStatus >= 200
+    * print temp1
+    * print temp2
+
+    Examples:
+      | name1         | job1    |
+      | Bob Dylan     | singer  |
+      | Nyan Cat      | cat     |
+      | Jamie Oliver  | cook    |
+      | Keanu Reeves  | actor   |
 
   Scenario: Send Post
     * def bodyReq = read('classpath:alltests/json/createUser.json')
