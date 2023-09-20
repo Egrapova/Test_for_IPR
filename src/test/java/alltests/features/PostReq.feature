@@ -1,7 +1,6 @@
 Feature: Post
   Background:
-    * url "https://reqres.in/"
-    * karate.configure('ssl', { trustAll: true })
+    * url someUrlBase
 
   Scenario: Send Post
     Given path "api/users"

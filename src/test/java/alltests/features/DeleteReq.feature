@@ -1,7 +1,6 @@
 Feature: Delete
   Background:
-    * url "https://reqres.in/"
-    * karate.configure('ssl', { trustAll: true })
+    * url someUrlBase
 
   Scenario: Send Delete
     Given path "api/users/2"

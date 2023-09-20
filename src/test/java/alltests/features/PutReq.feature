@@ -1,7 +1,6 @@
 Feature: Put
   Background:
-    * url "https://reqres.in/"
-    * karate.configure('ssl', { trustAll: true })
+    * url someUrlBase
 
   Scenario: Send Put
     Given path "api/users/2"

@@ -1,20 +1,12 @@
 Feature: Testing Post&Get
-  Background:
-    * url "https://reqres.in/"
-    * karate.configure('ssl', { trustAll: true })
 
-  Scenario Outline: Create User Outline
+  Scenario Outline: Create User Outline <name1>
     * def body = read('classpath:alltests/json/createUserOutline.json')
     * def result = call read('classpath:alltests/features/PostReq.feature')
-    * def temp1 = '<name1>'
-    * def temp2 = '<job1>'
-    * match temp1 == __row.name1
-    * match temp2 == __row.job1
     * print result.response
     * match result.response == { createdAt: '#string', name: '#(name1)', id: '#string', job: '#(job1)'}
     * match result.responseStatus == 201
-#    * assert responseStatus >= 200
-
+    * assert result.responseStatus >= 200
 
     Examples:
       | name1         | job1    |
@@ -26,8 +18,8 @@ Feature: Testing Post&Get
   Scenario: Send Post
     * def bodyReq = read('classpath:alltests/json/createUser.json')
     * def result = call read('classpath:alltests/features/PostReq.feature') {'body':'#(bodyReq)'}
-#    * match result.response.name == 'Ivanov A A'
-  * print result
+    * match result.response.name == 'Ivanov A A'
+    * print result
 
   Scenario: Send Get
     * def result = call read('classpath:alltests/features/GetReq.feature')

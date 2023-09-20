@@ -1,7 +1,6 @@
 Feature: Get
   Background:
-    * url "https://reqres.in/"
-    * karate.configure('ssl', { trustAll: true })
+    * url someUrlBase
 
   Scenario: Send Get
     Given path "/api/users?page=1"
