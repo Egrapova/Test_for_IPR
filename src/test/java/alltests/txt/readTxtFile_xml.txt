@@ -1,0 +1,4 @@
+<test>
+    <task>Конкретная задача</task>
+    <todo>Изучить типы переменных def, json, txt, xml, xmlstring</todo>
+</test>

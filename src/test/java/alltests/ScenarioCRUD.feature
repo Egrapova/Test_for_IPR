@@ -1,4 +1,33 @@
 Feature: Testing Post&Get
+  Scenario: Read Files
+    * def txtfile = read('classpath:alltests/txt/readTxtFile.txt')
+    * def jsonfile = read('classpath:alltests/json/readJsonFile.json')
+    * def First = jsonfile.Control.Point.First
+    * def Second = jsonfile.Control.Point.Second
+    * def Third = jsonfile.Control.Point.Third
+    * def xmlfile = read('classpath:alltests/xml/readXmlFile.xml')
+    * print txtfile + ': 1.' + First + '; 2.' + Second + '; 3.' + Third + '.'
+    * print xmlfile
+#    преобразование в string
+    * string json_to_string = read('classpath:alltests/json/readJsonFile.json')
+    * print json_to_string
+    * string xml_to_string = read('classpath:alltests/xml/readXmlFile.xml')
+    * print xml_to_string#    преобразование в string
+#    преобразование в json
+    * json txt_to_json = read('classpath:alltests/txt/readTxtFile_json.txt')
+    * print txt_to_json
+    * json xml_to_json = read('classpath:alltests/xml/readXmlFile.xml')
+    * print xml_to_json
+#    преобразование в xml
+    * xml txt_to_xml = read('classpath:alltests/txt/readTxtFile_xml.txt')
+    * print txt_to_xml
+    * xml json_to_xml = read('classpath:alltests/json/readJsonFile.json')
+    * print json_to_xml
+#    преобразование в xmlstring
+    * xmlstring txt_to_xml = read('classpath:alltests/txt/readTxtFile_xml.txt')
+    * print txt_to_xml
+    * xmlstring json_to_xml = read('classpath:alltests/json/readJsonFile.json')
+    * print json_to_xml
 
   Scenario Outline: Create User Outline <name1>
     * def body = read('classpath:alltests/json/createUserOutline.json')

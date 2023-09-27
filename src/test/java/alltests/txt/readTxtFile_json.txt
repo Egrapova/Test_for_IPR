@@ -1,0 +1,8 @@
+{"Control":
+  {"Point":
+     {"First": "Создать файлы txt, json, xml",
+      "Second": "Вычитать файлы в разные типы переменных def, string, json, xml, xmlstring",
+      "Third": "Вывести на экран"
+     }
+  }
+}
