@@ -1,0 +1,79 @@
+{
+  "version":"2.1",
+  "event":{
+    "actionType":"ANALYZE",
+    "channel":"ISSUER",
+    "subchannel":"WEBISSUER_ACQUIRER",
+    "timestamp":"2023-10-04 08:07:04.717",
+    "provider":{
+      "orgName":"GPBRETAIL"
+    },
+    "type":"PAYMENT",
+    "subtype":"EPOS_PURCHASE",
+    "eventDescription":"Покупка, оплата, выполняемая владельцем карты",
+    "card":{
+      "cardnumber":"220103xxxxxx0000",
+      "expireDate":"5611",
+      "cardBIN":"220103",
+      "3ds":{
+        "threeDSServerTransID":"fed59de0-628c-41ee-8deb-2e8aa55e6a5f",
+        "threeDSRequestorAuthenticationInd":"01",
+        "threeDSRequestorURL":"http://www.intervale.ru/contacts/",
+        "threeDSServerOperatorID":"threeDSServerOperatorUL",
+        "threeDSServerURL":"https://10.2.84.68:11484",
+        "messageCategory":"01",
+        "messageVersion":"2.1.0",
+        "transType":"01",
+        "threeDSRequestorID":"506",
+        "browserLanguage":"en-US",
+        "device":{
+          "browserAcceptHeader":"application/json, text/javascript, */*; q\u003d0.01",
+          "browserColorDepth":"24",
+          "browserLanguage":"en-US",
+          "browserScreenHeight":1050,
+          "browserScreenWidth":1680,
+          "browserTZ":-180,
+          "browserUserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+          "deviceChannel":"02"
+        },
+        "acct":{
+        },
+        "merchant":{
+          "merchantURL":"http://10.2.84.72:15082/gcs2/Long_order_escription/Order_description/4EEA096E50948B54C32C32455AD6BCAC",
+          "merchantCountryCode":643
+        }
+      }
+    },
+    "deviceRequest":{
+      "ip":"10.1.8.111",
+      "userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+      "httpAccept":"application/json, text/javascript, */*; q\u003d0.01",
+      "atm":{
+        "merchantId":"Account2",
+        "MerchantName":"GCS_merchant2",
+        "MCC":"6013",
+        "AcquiringIIC":"220100"
+      },
+      "token":{
+        "DeviceIPaddress":"10.1.8.111"
+      }
+    },
+    "transactionData":{
+      "clientTransactionId":"fed59de0-628c-41ee-8deb-2e8aa55e6a5f",
+      "amount":"11008",
+      "currency":"643",
+      "payer":{
+        "number":"220103xxxxxx0000"
+      }
+    }
+  },
+  "ext":[
+    {
+      "name":"3D Secure",
+      "value":true
+    },
+    {
+      "name":"sendType",
+      "value":"online"
+    }]
+}
