@@ -36,7 +36,7 @@ Feature: Work with Json
     * set myJson.array[0,1,2,3] = [111,222,333,444]
 #    Удаление параметра
     * remove myJson.event.card.3ds
-#    Удаление элемента массива
+#    Удаление элемента массива - !!! что-то не работает
     * remove myJson.array[1]
 #    Удаление параметра с помощью слова eval delete
     * eval delete myJson.event.transactionData
