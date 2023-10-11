@@ -1,0 +1,34 @@
+{
+  "name":"Offer",
+  "token":"BFAPILE4XQP5QLXQ",
+  "state":"offer",
+  "description":"Long order description",
+  "descriptionParams":{
+    "acquirerCommission":"50000",
+    "amountWithAcquirerCommission":"11004"
+  },
+  "params":{
+    "order_id":"ord-b25c19a1b1e4"
+  },
+  "merchant":{
+    "name":"GCS_merchant2",
+    "logoUrl":"https://lknpd.nalog.ru/static/media/logo-large.a6603fa8.png",
+    "url":"http://10.2.84.72:15082/gcs2/Long_order_escription/Order_description/4EEA096E50948B54C32C32455AD6BCAC",
+    "emailReceiptEnabled":true
+  },
+  "src":{
+    "type":"google_pay",
+    "pan":"555555xxxxxx4444"
+  },
+  "amount":1004,
+  "currency":"RUB",
+  "providerAlias":"gcs",
+  "options":{
+    "srcChangeDisabled":true,
+    "expiredCardsAllowed":true,
+    "customerReceiptAreaEnabled":true,
+    "gazpromPayEnabled":true,
+    "offerTimeout":900000,
+    "offerStartedAt":1696945211983
+  }
+}
