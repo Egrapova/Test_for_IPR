@@ -30,8 +30,8 @@ Feature: Work with Json
     * set myJson.add.inner.json = {new: 'inner', you see: 'yes'}
     * print myJson
     * print "!!!!!!!"
-    * print myJson.add.inner.json.you see
-#    !не получилось
+    * print myJson.add.inner.json['you see']
+
 
   Scenario: Delete
 #        Создать сценарий с удалением параметра в json, вывести полученный json на экран
